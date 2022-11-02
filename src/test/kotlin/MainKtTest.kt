@@ -151,7 +151,7 @@ class MainKtTest {
 
         val result = comission(monthSum = sum, transfer = payment)
 
-        assertEquals(0, result)
+        assertEquals(100, result)
     }
 
     @Test
