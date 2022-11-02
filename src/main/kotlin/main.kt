@@ -12,8 +12,8 @@ const val ERROR_LIMIT = -1
 const val ERROR_TYPE = -2
 
 fun main() {
-    println(comission(TYPE_MASTERCARD, 15_000, 200_000))
-    println(comission(TYPE_VK_PAY, 15_000, 200_000))
+//    println(comission(TYPE_MASTERCARD, 15_000, 200_000))
+//    println(comission(TYPE_VK_PAY, 15_000, 200_000))
 }
 
 fun comission(cardType: String = TYPE_VK_PAY, monthSum: Int = 0, transfer: Int): Int {
@@ -34,7 +34,6 @@ fun comission(cardType: String = TYPE_VK_PAY, monthSum: Int = 0, transfer: Int):
             if (((monthSum + transfer) < LIMIT_MONTH_VK_PAY) and (transfer < LIMIT_ONETIME_TRANSFER_VK_PAY)) 0
             else ERROR_LIMIT
         }
-
         else -> ERROR_TYPE
     }
 
